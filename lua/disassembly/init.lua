@@ -133,7 +133,7 @@ local function get_objdump(file, fn)
     callback = function()
       line = seek_line(lines)
       if line > 0 then
-        vim.api.nvim_win_set_cursor(screen.asm_win, { line, 0 })
+        vim.api.nvim_win_set_cursor(screen.asm_win, { line + 1, 0 })
       end
     end,
   })
